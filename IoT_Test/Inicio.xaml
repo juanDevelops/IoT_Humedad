@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IoT_Test.Inicio"
+             Title="Inicio">
+    <Grid  RowDefinitions="0.10*, 0.90*">
+        <Grid BackgroundColor="LightBlue" HeightRequest="4000"/>
+        <RoundRectangle Grid.Row="1" CornerRadius="30,30,0,0" Fill="White"/>
+
+        <Grid Grid.Row="1" RowSpacing="3" Margin="15,5,15,0">
+            <StackLayout>
+                <VerticalStackLayout Margin="10">
+                    <Button x:Name="btnActualizar" Clicked="btnActualizar_Clicked" Text="Actualizar lista" HeightRequest="50" TextColor="White" Background="LightBlue" CornerRadius="30" HorizontalOptions="FillAndExpand" />
+                    <StackLayout Orientation="Horizontal" Margin="10" Spacing="5">
+                        <!--<Button x:Name="btnModificar" Clicked="" Text="Modificar" HeightRequest="50" TextColor="White" Background="LightGray" CornerRadius="30" HorizontalOptions="FillAndExpand" />
+                        <Button x:Name="btnRentar" Clicked="" Text="Rentar" HeightRequest="50" TextColor="White" Background="LightGray" CornerRadius="30" HorizontalOptions="FillAndExpand" />-->
+                    </StackLayout>
+                </VerticalStackLayout>
+
+                <ListView x:Name="ListaCarros" SeparatorVisibility="Default" HasUnevenRows="True" Margin="10" SeparatorColor="Black">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="10, 5, 10, 5">
+                                    <StackLayout  Margin="10,0,0,0">
+                                        <Label Text="{Binding Time}" FontFamily="bold" TextColor="Black" LineBreakMode="WordWrap" MaxLines="2" />
+                                        <Label Grid.Row="0" Text="{Binding Value}" FontFamily="medium" TextColor="Black" />
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+</ContentPage>

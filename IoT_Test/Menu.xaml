@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:IoT_Test"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="#5f5f5f"
+BarTextColor="White"
+             x:Class="IoT_Test.Menu"
+             Title="Menu">
+
+    <local:Inicio Title="Registros" IconImageSource="{FontImage FontFamily='fas', Glyph='&#xf03a;', Size='30'}"></local:Inicio>
+    <local:Insertar Title="Lista"  IconImageSource="{FontImage FontFamily='fas', Glyph='&#xf015;', Size='30'}"></local:Insertar>
+
+</TabbedPage>

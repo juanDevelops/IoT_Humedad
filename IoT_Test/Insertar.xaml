@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IoT_Test.Insertar"
+             Title="Insertar">
+
+    <Grid RowDefinitions="0.10*, 0.90*">
+        <Grid BackgroundColor="LightBlue" HeightRequest="4000"/>
+        <RoundRectangle Grid.Row="1" Fill="White" CornerRadius="30,30,0,0"/>
+
+        <Grid Grid.Row="1" RowSpacing="10" Margin="15,5,15,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Vertical" Grid.Row="0" Padding="20">
+                <!--<Label Text="Bienvenido" HorizontalTextAlignment="Center" FontFamily="bold" FontSize="Title" TextColor="Black"/>-->
+                <Label Text="Rellena los datos para registrar un nuevo dato." HorizontalTextAlignment="Center" FontFamily="medium" TextColor="Gray"/>
+            </StackLayout>
+
+            <!--#region DATEPICKER -->
+            <StackLayout Orientation="Vertical" Grid.Row="1" HorizontalOptions="Fill">
+                <Frame BackgroundColor="#f1f0f0" BorderColor="Transparent" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="50">
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Frame BackgroundColor="LightBlue" BorderColor="LightBlue" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="1">
+                            <Image Margin="9">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="fas" Glyph="&#xf073;"/>
+                                </Image.Source>
+                            </Image>
+                        </Frame>
+                        <Frame CornerRadius="30" BackgroundColor="#f1f0f0" BorderColor="#f1f0f0" HeightRequest="50" HorizontalOptions="FillAndExpand" Padding="0" Margin="0,0,0,0">
+                            <DatePicker x:Name="dpFechaSalida" HorizontalOptions="FillAndExpand"  TextColor="#A3A3A3" HeightRequest="50" Margin="10,0,20,0">
+                            </DatePicker>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <!--#endregion-->
+
+            <!--#region ENTRY VALOR -->
+            <StackLayout Grid.Row="2" Orientation="Vertical" HorizontalOptions="Fill">
+                <Frame BackgroundColor="#f1f0f0" BorderColor="Transparent" Padding="0" HorizontalOptions="Fill" CornerRadius="30" VerticalOptions="Fill" HeightRequest="50">
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <Frame BackgroundColor="LightBlue" BorderColor="LightBlue" WidthRequest="50" HeightRequest="50" CornerRadius="30" Padding="0" Margin="1">
+                            <Image Margin="9">
+                                <Image.Source>
+                                    <FontImageSource FontFamily="fas" Glyph="&#xf121;"/>
+                                </Image.Source>
+                            </Image>
+                        </Frame>
+                        <Entry x:Name="tbValor" FontFamily="medium" Placeholder="Valor" Keyboard="Numeric" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="50" Margin="15,0,0,0" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <!--#endregion-->
+
+            <!--#region BOTON GUARDAR -->
+            <Grid Grid.Row="4">
+                <StackLayout Orientation="Horizontal" Spacing="5" Margin="0">
+                    <Button x:Name="btnRegistrar" Text="Registrar" Clicked="btnRegistrar_Clicked" HeightRequest="50" TextColor="White" Background="LightBlue" CornerRadius="30" HorizontalOptions="FillAndExpand" />
+                    <Button x:Name="btnModificar" Text="Modificar" HeightRequest="50" TextColor="White" Background="LightGray" CornerRadius="30" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </Grid>
+            <!--#endregion-->
+
+        </Grid>
+    </Grid>
+    
+</ContentPage>
